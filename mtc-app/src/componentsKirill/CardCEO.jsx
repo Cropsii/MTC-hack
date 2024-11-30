@@ -1,25 +1,26 @@
 import React from "react";
-import "./Card.css";
+import "./CardCEO.css";
 import { FaPhoneAlt } from 'react-icons/fa';  
 import { FaEnvelope } from 'react-icons/fa';  
 
-const CardCEO = ({ name, patronymic, position, depart, telephone, email, image }) => {
+const CardCEO = ({ name, surname, position,  project, telephone, email, image }) => {
   return (
     <div className="card">
       <div className="card-header">
         <img
           src={image}
-          alt={`${name} ${patronymic}`}
+          alt={`${name} ${surname}`}
           className="card-avatar"
         />
         <div className="card-info">
-          <h3>{`${name} ${patronymic}`}</h3>
+          <h3>{`${name} ${surname}`}</h3>
           <p>{position}</p>
         </div>
       </div>
       <div className="card-body">
       <div>
-          <p>Текущий проект: <br/> {depart}</p>
+          Текущий проект: 
+          <p>{ project}</p>
       </div>
       </div>
       <div className="card-tags">
