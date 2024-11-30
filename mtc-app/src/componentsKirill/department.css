@@ -1,0 +1,69 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content; /* Две карточки в строке с отступами */
+    height: fit-content;
+    margin: 1rem 2.5%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 54px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .card-image {
+    width: 290px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: calc(40vh);
+  }
+  
+  .card-body {
+    margin-top: 1rem;
+  }
+  
+  .card-option {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'MTSWideRegular';
+  }
+  
+  .card-title {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: red;
+    font-family: 'MTSWideRegular';
+  }
+  
+  .card-details {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'MTSWideRegular';
+  }
+  
+  .card-details li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: calc(90%); /* Одна карточка на маленьких экранах */
+      margin: 1rem auto;
+    }
+  }
