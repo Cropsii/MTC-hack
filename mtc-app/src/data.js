@@ -1,11 +1,11 @@
-import profImage1 from './assets/profImage1.png'
-import profImage2 from './assets/profImage2.png'
-import profImage3 from './assets/profImage3.png'
-import profImage4 from './assets/profImage4.png'
-import profImage5 from './assets/profImage5.png'
-import profImage6 from './assets/profImage6.png'
-import profImage7 from './assets/profImage7.png'
-import profImage8 from './assets/profImage8.png'
+import profImage1 from './assets/images/profImage1.png'
+import profImage2 from './assets/images/profImage2.png'
+import profImage3 from './assets/images/profImage3.png'
+import profImage4 from './assets/images/profImage4.png'
+import profImage5 from './assets/images/profImage5.png'
+import profImage6 from './assets/images/profImage6.png'
+import profImage7 from './assets/images/profImage7.png'
+import profImage8 from './assets/images/profImage8.png'
 
 export const personInfo = {
     "result": [
@@ -13,7 +13,7 @@ export const personInfo = {
             name: "Глеб",
             surname: "Орлов",
             position: "Дизайнер UI/UX",
-            project: "Мобильное приложение",
+            depart: "МТС Live",
             subdivision: "IT-отдел",
             city: "Москва",
             workProfile: "Дизайн",
@@ -26,11 +26,11 @@ export const personInfo = {
             name: "Роман",
             surname: "Тарасов",
             position: "Дизайнер UI/UX",
-            project: "Мобильное приложение",
+            depart: "Мобильное приложение",
             subdivision: "IT-отдел",
             city: "Волхов",
             workProfile: "Создание макетов",
-            telephone: "8 931 234 40-77",
+            telephone: "8 731 234 40-77",
             email: "romashka@mail.ru",
             image: profImage8
         },
@@ -38,7 +38,7 @@ export const personInfo = {
             name: "Максим",
             surname: "Звйцев",
             position: "Дизайнер UI/UX",
-            project: "Мобильное приложение",
+            depart: "Мобильное приложение",
             subdivision: "IT-отдел",
             city: "Москва",
             workProfile: "Wireframing",
@@ -50,7 +50,7 @@ export const personInfo = {
             name: "Юлия",
             surname: "Морозова",
             position: "Разработчик программного обеспечения",
-            project: "Мобильное приложение",
+            depart: "Мобильное приложение",
             subdivision: "IT-отдел",
             city: "Москва",
             workProfile: "Java",
@@ -63,7 +63,7 @@ export const personInfo = {
             name: "Павел",
             surname: "Волков",
             position: "Аналитик данных",
-            project: "Мобильное приложение",
+            depart: "Мобильное приложение",
             subdivision: "Отдел продаж",
             city: "Москва",
             workProfile: "Финансы",
@@ -76,7 +76,7 @@ export const personInfo = {
             name: "Екатерина",
             surname: "Сорокина",
             position: "Копирайтер",
-            project: "Мобильное приложение",
+            depart: "Мобильное приложение",
             subdivision: "IT-отдел",
             city: "Москва",
             workProfile: "Блогинг",
@@ -89,7 +89,7 @@ export const personInfo = {
             name: "Виктория",
             surname: "Орлова",
             position: "Специалист по PR",
-            project: "Мобильное приложение",
+            depart: "Мобильное приложение",
             subdivision: "IT-отдел",
             city: "СПб",
             workProfile: "Внутринние коммуникации",
@@ -102,7 +102,7 @@ export const personInfo = {
             name: "Игорь",
             surname: "Михайлов",
             position: "Специалист по работе с клиентами",
-            project: "Мобильное приложение",
+            depart: "Мобильное приложение",
             subdivision: "Custom Service",
             city: "Москва",
             workProfile: "Техническая поддержка",
@@ -111,5 +111,5 @@ export const personInfo = {
             image: profImage6,
 
         },
-    ],
+    ]
 };

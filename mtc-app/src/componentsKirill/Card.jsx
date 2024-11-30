@@ -4,7 +4,7 @@ import Tag from "./tag";
 import { FaPhoneAlt } from 'react-icons/fa';  // Иконка телефона
 import { FaEnvelope } from 'react-icons/fa';  // Иконка почты
 
-const Card = ({ name, surname, position, project, subdivision, city, workProfile, telephone, email, image }) => {
+const Card = ({ name, surname, position, depart, subdivision, city, workProfile, telephone, email, image }) => {
   return (
     <div className="card">
       <div className="card-header">
@@ -20,7 +20,8 @@ const Card = ({ name, surname, position, project, subdivision, city, workProfile
       </div>
       <div className="card-body">
       <div>
-          <p>Текущий проект: <br/> {project}</p>
+          Департамент: 
+          <p> {depart}</p>
       </div>
       </div>
       <div className="card-tags">

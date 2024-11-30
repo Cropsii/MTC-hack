@@ -3,7 +3,7 @@ import "./Card.css";
 import { FaPhoneAlt } from 'react-icons/fa';  
 import { FaEnvelope } from 'react-icons/fa';  
 
-const CardCEO = ({ name, patronymic, position, project, telephone, email, image }) => {
+const CardCEO = ({ name, patronymic, position, depart, telephone, email, image }) => {
   return (
     <div className="card">
       <div className="card-header">
@@ -19,7 +19,7 @@ const CardCEO = ({ name, patronymic, position, project, telephone, email, image 
       </div>
       <div className="card-body">
       <div>
-          <p>Текущий проект: <br/> {project}</p>
+          <p>Текущий проект: <br/> {depart}</p>
       </div>
       </div>
       <div className="card-tags">
