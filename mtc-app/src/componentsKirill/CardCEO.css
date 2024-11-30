@@ -1,0 +1,78 @@
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 54px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    aspect-ratio: 1;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .card-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 28px;
+    margin-right: 1rem;
+    border: 1.5px solid red
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: red;
+    font-family: 'MTSWideMedium';
+  }
+  
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: 'MTSWideRegular';
+  }
+  
+  .card-body {
+    margin-bottom: 1rem;
+  }
+
+  .project-value {
+    margin-top: 0.01rem;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    color: red;
+  }
+  
+  .card-tags span {
+    display: inline-block;
+    background-color: #f0f0f0;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'MTSWideRegular';
+  }
+  
+  .card-footer p {
+    font-size: 0.75rem;
+    margin: 0.2rem 0;
+  }
+
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+  }
+  
+  .contact-info svg {
+    font-size: 15px; 
+  }

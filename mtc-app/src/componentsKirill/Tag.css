@@ -1,0 +1,15 @@
+.tag {
+    display: inline-block;
+    height: 29px; /* Фиксированная высота */
+    padding: 0 12px; /* Отступы по горизонтали */
+    font-size: 14px;
+    line-height: 29px; /* Центрируем текст по вертикали */
+    border: 1px solid #000;
+    border-radius: 15px; /* Скругление углов */
+    margin-right: 8px;
+    margin-bottom: 8px;
+    white-space: nowrap; /* Запрещаем перенос строки */
+    overflow: hidden;
+    font-family: 'MTSWideRegular';
+  }
+
