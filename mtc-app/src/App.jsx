@@ -15,7 +15,6 @@ function App() {
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
-    console.log('Search Query:', event.target.value);
   };
 
   const handleTabChange = (tab) => {
@@ -36,7 +35,6 @@ function App() {
       })
     : [];
 
-  console.log('Filtered Data:', filteredData);
 
   const tabs = ['Сотрудники', 'Руководители', 'Департаменты'];
 
