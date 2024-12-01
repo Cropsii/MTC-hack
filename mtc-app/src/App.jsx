@@ -108,15 +108,15 @@ function App() {
             return (
               <div key={index} className="card-grid">
                 <Depart
-                  tags={person[""]}
-                  option={person[""]}
-                  name={person[""]}
-                  adress={person[""]}
-                  inn={person[""]}
-                  kpp={person[""]}
-                  ogrn={person[""]}
-                  email={person[""]}
-                  img={person[""]}
+                  tags={person["Подразделение 4"]}
+                  option={person["Должность"]}
+                  name={person["Фамилия"]}
+                  adress={person["Подразделение 3"]}
+                  inn={person["Телефон"]}
+                  kpp={person["Город"]}
+                  ogrn={person["Адрес"]}
+                  email={person["Почта"]}
+                  img={person["Фото"]}
                 />
               </div>
             );
