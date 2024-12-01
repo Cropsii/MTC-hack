@@ -98,7 +98,7 @@ function App() {
                 workProfile={person["Роль"]}
                 telephone={person["Телефон"]}
                 email={person["Почта"]}
-                image={["Фото"]}
+                image={""}
               />
             );
           } else if (

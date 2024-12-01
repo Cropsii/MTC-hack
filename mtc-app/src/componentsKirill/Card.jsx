@@ -9,7 +9,7 @@ const Card = ({ name, surname, position, depart, subdivision, city, workProfile,
     <div className="card">
       <div className="card-header">
         <img
-          src={image}
+          src={`profileplaceholder.jpg`}
           alt={`${name} ${surname}`}
           className="card-avatar"
         />
