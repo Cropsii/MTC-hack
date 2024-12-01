@@ -94,5 +94,8 @@ cd <папка с проектом>
 **Контакты:**
 
 - Telegram: [@kiryshahaha0_0](https://t.me/kiryshahaha0_0)
+- Telegram: [@Cropsi](https://t.me/Cropsi)
+- Telegram: [@ARV_15](https://t.me/ARV_15)
+- Telegram: [@heat_heattt](https://heat_heattt)
 
 ---
