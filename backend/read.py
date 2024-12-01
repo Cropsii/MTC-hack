@@ -1,9 +1,9 @@
 import pandas as pd
 import json
 
-def read_csv_to_json(file_path, json_output_path):
-    # Read the CSV file
-    df = pd.read_csv(file_path)
+def read_spreadsheet_to_json(file_path, json_output_path):
+    # Read the spreadsheet
+    df = pd.read_excel(file_path)
 
     # Convert the DataFrame to a list of dictionaries
     data = df.to_dict(orient='records')
@@ -16,4 +16,5 @@ def read_csv_to_json(file_path, json_output_path):
         f.write(json_data)
 
 if __name__ == "__main__":
-    read_csv_to_json('data/employees.csv', 'data.json')
+    read_spreadsheet_to_json('data/employees.xlsx', 'data.json')
+
