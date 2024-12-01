@@ -11,11 +11,8 @@ export default function Header({ searchQuery, onSearchChange }) {
           value={searchQuery}
           onChange={onSearchChange}
         />
-        <img src="/filter.svg" className="w-5 h-5 ml-2 transition duration-200 hover:custom-bright-red cursor-pointer "alt="" />
       </div>
-        <a  href='|' className='max-w-16 w-full h-16 flex justify-center items-center bg-white rounded-full  '>
-          <img src="/settings.svg" alt="" /> 
-        </a>
+    <div></div>
     </div>
   )
 }
