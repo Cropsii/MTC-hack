@@ -8,7 +8,7 @@ const CardCEO = ({ name, surname, position,  project, telephone, email, image })
     <div className="card">
       <div className="card-header">
         <img
-          src={image}
+          src={"profileplaceholder.jpg"}
           alt={`${name} ${surname}`}
           className="card-avatar"
         />

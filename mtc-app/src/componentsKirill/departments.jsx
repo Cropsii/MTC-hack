@@ -6,12 +6,12 @@ const Depart = ({ tags, option, name, adress, inn, kpp, ogrn, email, img }) => {
   return (
     <div className="card">
       <div className="card-header">
-        <img src={img} alt={name} className="card-image" />
-        <div className="card-tags" >
-          {tags.map((tag, index) => (
-            <Tag key={index} text={tag} />
-          ))}
-        </div>
+        <img src={"Exolve2.svg"} alt={name} className="card-image" />
+        {/*<div className="card-tags" >*/}
+        {/*  {tags.map((tag, index) => (*/}
+        {/*    <Tag key={index} text={tag} />*/}
+        {/*  ))}*/}
+        {/*</div>*/}
       </div>
       <div className="card-body">
         <p className="card-option">{option}</p>
