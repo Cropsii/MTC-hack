@@ -4,7 +4,8 @@
 **Проект:** МТС Focus  
 
 ---
-
+![Main][(http://url/to/img.png](https://github.com/Cropsii/MTC-hack/blob/9c322532b6cbc93de709af8c80985f202181e9c7/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%B0.png))
+---
 ## Описание  
 МТС Focus — это MVP веб-приложения с интуитивным UX и современным UI-дизайном для визуализации структуры компании.  
 
