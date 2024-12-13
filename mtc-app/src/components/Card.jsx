@@ -1,6 +1,6 @@
 import React from "react";
-import "./Card.css";
-import Tag from "./tag";
+import "../componentsStyle/Card.css";
+import Tag from "./Tags";
 import { FaPhoneAlt } from 'react-icons/fa';  // Иконка телефона
 import { FaEnvelope } from 'react-icons/fa';  // Иконка почты
 
@@ -15,18 +15,16 @@ const Card = ({ name, surname, position, depart, subdivision, city, workProfile,
         />
         <div className="card-info">
           <h3>{`${name} ${surname}`}</h3>
-          <p>{position}</p>
+          <p className={"position"}>{position}</p>
         </div>
       </div>
       <div className="card-body">
-      <div>
-          Департамент: 
+          Отдел:
           <p> {depart}</p>
       </div>
-      </div>
       <div className="card-tags">
-          <Tag text={subdivision}/>
           <Tag text={city}/>
+          <Tag text={depart}/> {/*Пока нету*/}
           <Tag text={workProfile}/>
       </div>
       <div className="card-footer">

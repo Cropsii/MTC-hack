@@ -1,0 +1,31 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+    /*margin-bottom: 20px;*/
+    /*margin-left: 10px;*/
+    height: 60px;
+    font-family: 'MTSWideRegular';
+
+}
+
+.tab-button {
+    padding: 20px;
+    cursor: pointer;
+    /*margin-right: 10px;*/
+    transition: 0.5s ease;
+    height: 60px;
+    opacity: 50%;
+    font-size: 15px;
+}
+
+.tab-button.active {
+    font-family: 'MTSWideMedium';
+    font-size: 20px;
+    height: 60px;
+    opacity: 100%;
+    transition: 0.5s ease;
+}
+
+.tab-button:hover{
+    opacity: 100%;
+}

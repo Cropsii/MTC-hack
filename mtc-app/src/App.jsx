@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
-import Main from "./components/Main";
-import CardCEO from "./componentsKirill/CardCEO"; // Импортируем компонент для руководителей
-import Card from "./componentsKirill/Card"; // Импортируем компонент Card
-import Tabs from "./componentsKirill/Tabs"; // Импортируем компонент Tabs
-import Depart from "./componentsKirill/departments";
-import "./componentsKirill/Card.css";
+// import Main from "./components/Main";
+import CardCEO from "./components/CardCEO"; // Импортируем компонент для руководителей
+import Card from "./components/Card"; // Импортируем компонент Card
+import Tabs from "./components/Tabs"; // Импортируем компонент Tabs
+import "./componentsStyle/AllCards.css"
+import Depart from "./components/CardDepart";
+import "./componentsStyle/Tabs.css"
+// import "./components/Card.css";
 
 function App() {
   const [data, setData] = useState([]); // Используем personInfo.result
@@ -62,14 +64,13 @@ function App() {
       <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
       <Tabs tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
       {/* Инлайн стиль который поправляет карточки */}
-      <div style={{display:"flex", flexDirection:"row",flexWrap:"wrap",justifyContent:"center"}}>
+      <div className={"cards-grid"}>
         {filteredData.map((person, index) => {
           if (
             activeTab === "Руководители" &&
             person["Роль"] === "руководство "
           ) {
             return (
-              <div key={index}>
                 <CardCEO
                   name={person["Имя"]}
                   surname={person["Фамилия"]}
@@ -80,13 +81,12 @@ function App() {
                   telephone={person["Телефон"]}
                   email={person["Почта"]}
                   image={["Фото"]}
-                  project={person[""]}
+                  project={person["Подразделение 2"]}
                 />
-              </div>
             );
           } else if (
             activeTab === "Сотрудники" &&
-            !(person["Роль"] === "руководство ")
+            !(person["Роль"] === "руководство ") && !(person["Роль"] === "depart")
           ) {
             return (
               <Card
@@ -106,7 +106,7 @@ function App() {
             person["Роль"] === "depart"
           ) {
             return (
-              <div key={index} className="card-grid">
+              <div key={index} className="depart-grid">
                 <Depart
                   tags={person["Подразделение 4"]}
                   option={person["Должность"]}

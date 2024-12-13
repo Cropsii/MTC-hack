@@ -1,22 +1,16 @@
 import React from "react";
-import "./department.css";
-import Tag from "./tag";
+import "../componentsStyle/department.css"
 
 const Depart = ({ tags, option, name, adress, inn, kpp, ogrn, email, img }) => {
   return (
-    <div className="card">
-      <div className="card-header">
-        <img src={"Exolve2.svg"} alt={name} className="card-image" />
-        {/*<div className="card-tags" >*/}
-        {/*  {tags.map((tag, index) => (*/}
-        {/*    <Tag key={index} text={tag} />*/}
-        {/*  ))}*/}
-        {/*</div>*/}
+    <div className={"depart"}>
+      <div className="depart-header">
+        <img src={"Exolve2.svg"} alt={name} className="depart-image" />
       </div>
-      <div className="card-body">
-        <p className="card-option">{option}</p>
-        <p className="card-title">Реквизиты:</p>
-        <ul className="card-details">
+      <div className="depart-body">
+        <p className="depart-option">{option}</p>
+        <p className="depart-title">Реквизиты:</p>
+        <ul className="depart-details">
           <li><strong>Название компании:</strong> {name}</li>
           <li><strong>Фактический адрес:</strong> {adress}</li>
           <li><strong>ИНН:</strong> {inn}</li>

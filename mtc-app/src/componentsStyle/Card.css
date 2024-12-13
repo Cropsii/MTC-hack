@@ -1,0 +1,89 @@
+.card-header {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 28px;
+    margin-right: 20px;
+    border: 1px solid red;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: red;
+    font-family: 'MTSWideMedium';
+}
+
+p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: 'MTSWideRegular';
+}
+
+.card-info {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    width: 15rem;
+}
+
+.card-body {
+    width: 300px;
+    height: 60px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-family: 'MTSWideMedium';
+}
+
+/*.project-value {*/
+/*  margin-top: 0.01rem;*/
+/*}*/
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    color: red;
+    /*padding: 10px;*/
+}
+
+.card-footer {
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+.card-footer p {
+    font-size: 0.75rem;
+    margin: 0.2rem 0;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info svg {
+    font-size: 0.9rem;
+}
+
+.card-tags {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: calc(40vh);
+    /*justify-content: space-between;*/
+}
+
+

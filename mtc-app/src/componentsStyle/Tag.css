@@ -1,15 +1,23 @@
 .tag {
     display: inline-block;
+    /*justify-items: auto;*/
     height: 29px; /* Фиксированная высота */
-    padding: 0 12px; /* Отступы по горизонтали */
+    padding: 0 10px; /* Отступы по горизонтали */
     font-size: 14px;
     line-height: 29px; /* Центрируем текст по вертикали */
     border: 1px solid #000;
     border-radius: 15px; /* Скругление углов */
-    margin-right: 8px;
-    margin-bottom: 8px;
+    /*margin-right: 8px;*/
+    /*margin-bottom: 8px;*/
     white-space: nowrap; /* Запрещаем перенос строки */
     overflow: hidden;
     font-family: 'MTSWideRegular';
   }
+
+div .tag:hover{
+    color: #fff; /* Белый цвет текста */
+    background: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
 

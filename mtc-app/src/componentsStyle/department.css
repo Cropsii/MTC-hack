@@ -1,0 +1,111 @@
+.depart{
+    border-radius: 54px;
+    /*width: 600px;*/
+    /*height: 800px;*/
+    transition: 1s;
+    animation: 0.5s show;
+    display: flex;
+    flex-direction: column;
+    width: fit-content; /* Две карточки в строке с отступами */
+    height: fit-content;
+    margin: 1rem 2.5%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.depart-header {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.depart-image{
+    border-radius: 28px;
+    border: 1px solid red;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: red;
+    font-family: 'MTSWideMedium';
+}
+
+p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: 'MTSWideRegular';
+}
+
+/*.card-info {*/
+/*    !*display: flex;*!*/
+/*    !*flex-wrap: wrap;*!*/
+/*    width: 15rem;*/
+/*}*/
+
+.depart-body {
+    justify-content: center;
+    margin: 1rem 1rem;
+    font-family: 'MTSWideMedium';
+    font-size: 14px;
+}
+
+/*.project-value {*/
+/*  margin-top: 0.01rem;*/
+/*}*/
+
+/*.contact-info {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    color: red;*/
+/*    !*padding: 10px;*!*/
+/*}*/
+
+/*.card-footer {*/
+/*    padding: 10px;*/
+/*    margin-top: 1rem;*/
+/*}*/
+
+/*.card-footer p {*/
+/*    font-size: 0.75rem;*/
+/*    margin: 0.2rem 0;*/
+/*}*/
+
+/*.contact-info p {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 8px;*/
+/*}*/
+
+/*.contact-info svg {*/
+/*    font-size: 0.9rem;*/
+/*}*/
+
+/*.card-tags {*/
+/*    margin-left: 1rem;*/
+/*    height: 60px;*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    flex-direction: row;*/
+/*    gap: 0.5rem;*/
+/*    width: calc(40vh);*/
+/*    !*justify-content: space-between;*!*/
+/*}*/
+
+.depart-title {
+    color: red;
+    font-family: 'MTSWideMedium';
+    font-size: 17px;
+}
+
+.depart-option{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.depart-details {
+    font-size: 14px;
+}
