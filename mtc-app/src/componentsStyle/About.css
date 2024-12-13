@@ -1,0 +1,62 @@
+.about-cards{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, 600px);
+    grid-column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    margin-top: 10px;
+}
+
+
+.card-about{
+    border-radius: 54px;
+    transition: 1s;
+    animation: 0.5s showabout ease;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    margin: 1rem 2.5%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes showabout {
+    from {
+        opacity: 0;
+        transform: scale(105%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+.card-about-header {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-about h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: black;
+    font-family: 'MTSWideMedium';
+}
+
+.card-about p {
+    margin: 3rem 1rem;
+    font-size: 1.25rem;
+    font-family: 'MTSWideRegular';
+}
+
+.card-about li{
+    margin: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-family: 'MTSWideRegular';
+}

@@ -1,14 +1,17 @@
-.tabs {
+.navigation{
     display: flex;
-    justify-content: center;
-    /*margin-bottom: 20px;*/
-    /*margin-left: 10px;*/
+    justify-content: flex-start;
     height: 60px;
+    margin-left: 7rem;
     font-family: 'MTSWideRegular';
-
+    transition: 0.5s ease;
 }
 
-.tab-button {
+.separator{
+    opacity: 50%;
+}
+
+.button {
     padding: 20px;
     cursor: pointer;
     /*margin-right: 10px;*/
@@ -18,14 +21,16 @@
     font-size: 15px;
 }
 
-.tab-button.active {
+.active{
     font-family: 'MTSWideMedium';
     font-size: 20px;
     height: 60px;
     opacity: 100%;
-    transition: 0.2s ease;
+    transition: 0.5s ease;
 }
 
-.tab-button:hover{
+.button:hover{
     opacity: 100%;
 }
+
+

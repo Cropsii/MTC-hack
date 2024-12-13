@@ -1,8 +1,8 @@
 import React from "react";
 import "../componentsStyle/Tag.css";
 
-const Tag = ({ text }) => {
-  return <div className="tag">{text}</div>;
+const Tag = ({ text, onClick }) => {
+  return <div className="tag" onClick={onClick}>{text}</div>;
 };
 
 export default Tag;
