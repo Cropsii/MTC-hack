@@ -20,7 +20,7 @@ function App() {
     const [activeTab, setActiveTab] = useState("Сотрудники");
     const [filterTag, setFilterTag] = useState("");
     const [isFilterPanelOpen, setIsFilterPanelOpen] = useState(false);
-    const [filters, setFilters] = useState({city: '', department: '', role: ''});
+    const [filters, setFilters] = useState({city: '', department: '', role: '', position: ''});
 
     useEffect(() => {
         fetch("http://localhost:8008/data")
@@ -56,7 +56,7 @@ function App() {
 
     const handleResetFilters = () => {
     setFilterTag("");
-    setFilters({ city: "", department: "", role: "" });
+    setFilters({ city: "", department: "", role: "", position: "" });
   };
 
     const columnsToSearch = [
@@ -88,6 +88,7 @@ function App() {
         && (filters.city ? item["Город"] === filters.city : true)
         && (filters.department ? item["Подразделение 3"] === filters.department : true)
         && (filters.role ? item["Роль"] === filters.role : true)
+        && (filters.position ? item["Должность"] === filters.position : true)
         && (activeTab === "Руководители" ? item["Роль"] === "руководство " : true)
         && (activeTab === "Сотрудники" ? !(item["Роль"] === "руководство ") && !(item["Роль"] === "depart") : true)
         && (activeTab === "Департаменты" ? item["Роль"] === "depart" : true)
@@ -102,7 +103,8 @@ function App() {
             (activeTab === "Департаменты" ? item["Роль"] === "depart" : true) &&
             (currentFilters.city ? item["Город"] === currentFilters.city : true) &&
             (currentFilters.department ? item["Подразделение 3"] === currentFilters.department : true) &&
-            (currentFilters.role ? item["Роль"] === currentFilters.role : true)
+            (currentFilters.role ? item["Роль"] === currentFilters.role : true) &&
+            (currentFilters.position ? item["Должность"] === currentFilters.position : true)
         );
         return [...new Set(filteredByTab.filter(item => item[key]).map(item => item[key]))];
     };
@@ -110,6 +112,7 @@ function App() {
     const cities = getUniqueValues(data, "Город", filters);
     const departments = getUniqueValues(data, "Подразделение 3", filters);
     const roles = getUniqueValues(data, "Роль", filters);
+    const positions = getUniqueValues(data, "Должность", filters);
 
     return (
         <Router>
@@ -128,6 +131,7 @@ function App() {
                                     cities={cities}
                                     departments={departments}
                                     roles={roles}
+                                    positions={positions}
                                     currentFilters={filters}/>
 
                             <Tabs tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange}/>
@@ -149,6 +153,7 @@ function App() {
                                                 email={person["Почта"]}
                                                 image={["Фото"]}
                                                 project={person["Подразделение 2"]}
+                                                onTagClick={handleTagClick}
                                             />
                                         );
                                     } else if (

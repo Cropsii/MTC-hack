@@ -5,8 +5,10 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import Tag from "./Tags";
 
-const CardCEO = ({ name, surname, position, subdivision, project, city, telephone, email, image }) => {
-  return (
+const CardCEO = ({ name, surname, position, subdivision, project, city, telephone, email, image, onTagClick }) => {
+    const tags = [city, subdivision, position];
+
+    return (
     <div className="card">
       <div className="card-header">
         <img
@@ -24,9 +26,9 @@ const CardCEO = ({ name, surname, position, subdivision, project, city, telephon
           <p>{project}</p>
       </div>
       <div className="card-tags">
-          <Tag text={city}/>
-          <Tag text={subdivision}/>
-          <Tag text={position}/>
+          {tags.map((tag, index) => (
+            <Tag text={tag} key={index} onClick={() => onTagClick(tag)}/>
+          ))}
       </div> 
       <div className="card-footer">
         <p><strong>Контакты:</strong></p>
