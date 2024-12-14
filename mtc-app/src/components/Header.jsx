@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import {Link} from 'react-router-dom';
 import FilterPanel from "./FilterPanel";
 import React from "react";
-import {postcss} from "tailwindcss";
 
 export default function Header({
                                    searchQuery,
