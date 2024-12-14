@@ -44,29 +44,3 @@
 .header-logo:hover{
     cursor: pointer;
 }
-
-.searchbar{
-    display: flex;
-    margin-right: auto;
-    margin-left:auto;
-    width: 400px;
-    height: 50px;
-    border-radius: 28px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    animation: 0.2s showhead ease;
-}
-
-.searchimg{
-    display: flex;
-    align-self: center;
-    margin: 0 1rem;
-    width: 25px;
-    height: 25px;
-}
-
-.searchtype{
-    outline: 0;
-    width: 70%;
-}

@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,46 +7,45 @@
     height: 100px;
 }
 
-.header h2{
+.header h2 {
     font-family: "MTSWideRegular";
     margin-left: auto;
     color: dimgray;
 }
 
-.logolink{
+.logolink {
     margin-right: auto;
-    margin-left:auto;
+    margin-left: auto;
     display: flex;
     flex-wrap: wrap;
 }
 
-.home-title{
+.home-title {
     font-family: "MTSWideBlack";
     font-size: 23px;
     color: #db0031;
-    align-self:center;
+    align-self: center;
     margin-left: 1rem;
     animation: 0.2s showhead ease;
 }
 
-.logolink h1{
+.logolink h1 {
     font-family: "MTSWideBlack";
     font-size: 23px;
     color: #db0031;
-    align-self:center;
+    align-self: center;
     margin-left: 1rem;
     animation: 0.2s showhead ease;
 }
 
 @font-face {
-	font-family: 'MTSWideBlack';
-	src: url('../assets/fonts/Wide/MTSWide-Black/MTSWide-Black.eot');
-	src:
-	     url('../assets/fonts/Wide/MTSWide-Black/MTSWide-Black.eot?#iefix') format('embedded-opentype'),
-	     url('../assets/fonts/Wide/MTSWide-Black/MTSWide-Black.woff2') format('woff2'),
-	     url('../assets/fonts/Wide/MTSWide-Black/MTSWide-Black.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'MTSWideBlack';
+    src: url('../assets/fonts/Wide/MTSWide-Black/MTSWide-Black.eot');
+    src: url('../assets/fonts/Wide/MTSWide-Black/MTSWide-Black.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/Wide/MTSWide-Black/MTSWide-Black.woff2') format('woff2'),
+    url('../assets/fonts/Wide/MTSWide-Black/MTSWide-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*.header-logo{*/
@@ -59,31 +58,31 @@
 /*    margin-left: 10rem;*/
 /*}*/
 
-.header-logo{
+.header-logo {
     animation: 0.2s showhead ease;
     width: 50px;
     height: 50px;
 }
 
 @keyframes showhead {
-    from{
-        opacity:0;
+    from {
+        opacity: 0;
         transform: translate(0%, 30%);
     }
-    to{
-        opacity:1;
+    to {
+        opacity: 1;
         transform: translate(0%, 0%);
     }
 }
 
-.header-logo:hover{
+.header-logo:hover {
     cursor: pointer;
 }
 
-.searchbar{
+.searchbar {
     display: flex;
     margin-right: auto;
-    margin-left:auto;
+    margin-left: auto;
     width: 400px;
     height: 50px;
     border-radius: 28px;
@@ -93,7 +92,7 @@
     animation: 0.2s showhead ease;
 }
 
-.searchimg{
+.searchimg {
     display: flex;
     align-self: center;
     margin: 0 1rem;
@@ -101,7 +100,35 @@
     height: 25px;
 }
 
-.searchtype{
+.searchtype {
     outline: 0;
     width: 70%;
+}
+
+
+
+.button-filter{
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    opacity: 60%;
+    transition: 0.2s;
+}
+
+.button-filter:hover{
+    opacity: 1;
+}
+
+.cross-button{
+    align-self: center;
+    width: 12px;
+    height:12px;
+    cursor: pointer;
+    opacity: 60%;
+    transition: 0.2s;
+}
+
+.cross-button:hover{
+    opacity: 1;
 }

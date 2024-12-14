@@ -10,7 +10,7 @@ import Depart from "./components/CardDepart";
 import "./componentsStyle/Tabs.css"
 import HomePage from "./components/HomePage"
 import Footer from "./components/Footer"
-import FilterModal from "./components/FilterModal";
+import FilterPanel from "./components/FilterPanel";
 
 // import "./components/Card.css";
 
@@ -19,7 +19,7 @@ function App() {
     const [searchQuery, setSearchQuery] = useState("");
     const [activeTab, setActiveTab] = useState("Сотрудники");
     const [filterTag, setFilterTag] = useState("");
-    const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+    const [isFilterPanelOpen, setIsFilterPanelOpen] = useState(false);
     const [filters, setFilters] = useState({city: '', department: '', role: ''});
 
     useEffect(() => {
@@ -35,23 +35,29 @@ function App() {
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
+        setFilterTag("");
     };
 
     const handleTagClick = (tag) => {
         setFilterTag(tag); // Обновляем состояние фильтрации при нажатии на тэг
     };
 
-    const handleOpenFilterModal = () => {
-        setIsFilterModalOpen(true);
+    const handleOpenFilterPanel = () => {
+        setIsFilterPanelOpen(true);
     };
 
-    const handleCloseFilterModal = () => {
-        setIsFilterModalOpen(false);
+    const handleCloseFilterPanel = () => {
+        setIsFilterPanelOpen(false);
     };
 
     const handleApplyFilters = (filters) => {
         setFilters(filters);
     };
+
+    const handleResetFilters = () => {
+    setFilterTag("");
+    setFilters({ city: "", department: "", role: "" });
+  };
 
     const columnsToSearch = [
         "Подразделение 1",
@@ -78,16 +84,32 @@ function App() {
                     .toString()
                     .toLowerCase()
                     .includes(searchQuery.toLowerCase())
-        ) && (filterTag ? item["Город"] === filterTag || item["Подразделение 3"] === filterTag || item["Роль"] === filterTag : true) && (filters.city ? item["Город"] === filters.city : true)
+        ) && (filterTag ? item["Город"] === filterTag || item["Подразделение 3"] === filterTag || item["Роль"] === filterTag || item["Должность"] === filterTag : true)
+        && (filters.city ? item["Город"] === filters.city : true)
         && (filters.department ? item["Подразделение 3"] === filters.department : true)
         && (filters.role ? item["Роль"] === filters.role : true)
+        && (activeTab === "Руководители" ? item["Роль"] === "руководство " : true)
+        && (activeTab === "Сотрудники" ? !(item["Роль"] === "руководство ") && !(item["Роль"] === "depart") : true)
+        && (activeTab === "Департаменты" ? item["Роль"] === "depart" : true)
     );
 
     const tabs = ["Сотрудники", "Руководители", "Департаменты"];
 
-    const cities = [...new Set(data.map(item => item["Город"]))];
-    const departments = [...new Set(data.map(item => item["Подразделение 3"]))];
-    const roles = [...new Set(data.map(item => item["Роль"]))];
+    const getUniqueValues = (data, key, currentFilters) => {
+        const filteredByTab = data.filter((item) =>
+            (activeTab === "Руководители" ? item["Роль"] === "руководство " : true) &&
+            (activeTab === "Сотрудники" ? !(item["Роль"] === "руководство ") && !(item["Роль"] === "depart") : true) &&
+            (activeTab === "Департаменты" ? item["Роль"] === "depart" : true) &&
+            (currentFilters.city ? item["Город"] === currentFilters.city : true) &&
+            (currentFilters.department ? item["Подразделение 3"] === currentFilters.department : true) &&
+            (currentFilters.role ? item["Роль"] === currentFilters.role : true)
+        );
+        return [...new Set(filteredByTab.filter(item => item[key]).map(item => item[key]))];
+    };
+
+    const cities = getUniqueValues(data, "Город", filters);
+    const departments = getUniqueValues(data, "Подразделение 3", filters);
+    const roles = getUniqueValues(data, "Роль", filters);
 
     return (
         <Router>
@@ -96,16 +118,18 @@ function App() {
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/employees" element={
                         <>
-                            <Header searchQuery={searchQuery} onSearchChange={handleSearchChange}/>
-                            <button onClick={handleOpenFilterModal} className="filter-button">Открыть фильтры</button>
-                            <FilterModal
-                                isOpen={isFilterModalOpen}
-                                onClose={handleCloseFilterModal}
-                                onApplyFilters={handleApplyFilters}
-                                cities={cities}
-                                departments={departments}
-                                roles={roles}
-                            />
+                            <Header searchQuery={searchQuery}
+                                    onSearchChange={handleSearchChange}
+                                    isFilterPanelOpen={isFilterPanelOpen}
+                                    onOpenFilterPanel={handleOpenFilterPanel}
+                                    onCloseFilterPanel={handleCloseFilterPanel}
+                                    onApplyFilters={handleApplyFilters}
+                                    onResetFilters={handleResetFilters}
+                                    cities={cities}
+                                    departments={departments}
+                                    roles={roles}
+                                    currentFilters={filters}/>
+
                             <Tabs tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange}/>
                             <div className={"cards-grid"}>
                                 {filteredData.map((person, index) => {
